@@ -2,6 +2,8 @@ package com.khowal.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+
 import com.khowal.entity.User;
 
 public interface UserService {
@@ -16,4 +18,8 @@ public interface UserService {
 
 	public void sendEmail(String recipient, String body, String subject);
 
+	public String paginationFunction();
+	
+	public Page<User> getPaginatedUsers(int pageNo, int pageSize);
+	
 }
